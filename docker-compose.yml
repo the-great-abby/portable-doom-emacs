@@ -1,0 +1,10 @@
+version: "3"
+services:
+  emacs:
+    build:
+      context: .
+    volumes:
+      - ${PWD}/doomemacs:/root/.emacs.d
+      - ${PWD}/org:/root/org
+      - ${PWD}:/code
+        #- ${HOME}/.ssh:/root/.ssh

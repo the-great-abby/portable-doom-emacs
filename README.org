@@ -1,0 +1,32 @@
+#+title: README
+#+author: Abby Malson
+#+date: <2022-07-29 Fri>
+
+* Project Purpose
+This is to allow me to carry my emacs working station around
+and to allow me to setup my work environment in a more consistent
+fashion across all of the various work spaces
+
+* Setup of doom emacs portable docker container
+** Download DOOM Emacs
+#+BEGIN_SRC bash
+make download-doom-emacs
+#+END_SRC
+** Build Docker Container
+#+BEGIN_SRC bash
+make build
+#+END_SRC
+** Launch Container
+#+BEGIN_SRC bash
+make attach-run-shell
+#+END_SRC
+** Install DOOM Emacs (Fresh Build)
+#+BEGIN_SRC bash
+cd /code # (if not already there)
+make doom-install
+#+END_SRC
+** Cleanup
+#+BEGIN_SRC bash
+cd /code # (if not already there)
+make down-and-clean
+#+END_SRC
